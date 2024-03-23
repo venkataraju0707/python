@@ -1,0 +1,22 @@
+"""set1=set("hello")
+set1.add(1)
+set1.add(2)
+set1.remove(2)
+set1.discard("h")
+set1.pop()
+#set1.clear()
+print(set1)"""
+"""set1={1,2,3,4,5,6}
+set2={4,5,6,7}
+diff=set1.difference(set2)
+print(diff)"""
+set1={"v","e","n","k","a","t"}
+set2={"e","n","k","a","t"}
+diff=set1.difference(set2)
+union=set1.union(set2)
+print(diff)
+print(union)
+from Collections import Counters
+name="aaaabbbrrr"
+name1=name.counter()
+print(name)

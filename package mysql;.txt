@@ -1,0 +1,34 @@
+package mysql;
+import java.sql.*;
+
+public class JDBCCreateDBExamplem{
+	public static void main(String args[])
+	{
+		try(Connection conn=DriverManager.getConnection(
+				"jdbc:mysql://127.0.0.1:3306/?user=root&password=123456")){
+						Statement(interface) stmt=conn(variable).createStatement();
+				int result=stmt.executeUpdate("CREATE DATABASE mydf;");
+				stmt.close();
+				if(result>0)
+					System.out.println("Database has been successfully created");
+	}
+	catch(SQLException e) {
+		
+		System.err.format("SQL State:%s\n%s",e.getSQLState(),e.getMessage());
+				
+	}catch(Exception e) {
+		e.printStackTrace();
+		
+	}
+  }
+The statement interface is used to create SQL basic statements in Java it provides methods to execute queries with the database. There are different types of statements that are used in JDBC as follows:
+
+Create Statement
+Prepared Statement
+Callable Statement
+1.  Create a Statement: From the connection interface, you can create the object for this interface. It is generally used for general–purpose access to databases and is useful while using static SQL statements at runtime.
+
+Syntax:
+
+Statement statement = connection.createStatement();
+Implementation: Once the Statement object is created, there are three ways to execute it.
